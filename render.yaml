@@ -1,0 +1,45 @@
+databases:
+  - name: smartforum-db
+    databaseName: smartforum
+    user: db_user
+    plan: free
+
+services:
+  - type: web
+    name: smart-discussion-forum-backend
+    runtime: docker
+    plan: free
+    rootDir: backend
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: APP_DEBUG
+        value: true
+      - key: APP_URL
+        value: https://smart-discussion-forum-backend.onrender.com
+      - key: ASSET_URL
+        value: https://smart-discussion-forum-backend.onrender.com
+      - key: APP_KEY
+        value: "base64:pX2R8zQ9aW4bY7uL5vA3pZ8wN1mC5kR2tJ6hD0fS1eM="
+      - key: DB_CONNECTION
+        value: pgsql
+      - key: DB_HOST
+        fromDatabase:
+          name: smartforum-db
+          property: host
+      - key: DB_PORT
+        fromDatabase:
+          name: smartforum-db
+          property: port
+      - key: DB_DATABASE
+        fromDatabase:
+          name: smartforum-db
+          property: database
+      - key: DB_USERNAME
+        fromDatabase:
+          name: smartforum-db
+          property: user
+      - key: DB_PASSWORD
+        fromDatabase:
+          name: smartforum-db
+          property: password

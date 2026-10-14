@@ -1,0 +1,215 @@
+/* =====================================================================
+   Smart Discussion Forum — Desktop AppD Stylesheet
+   Mirrors the Tailwind color palette / typography used in the HTML
+   prototype: brand green #2F7A54, accent green #5CC98B, cream bg #F7F5EE.
+   ===================================================================== */
+
+.root {
+    -fx-font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    -fx-brand: #2F7A54;
+    -fx-brand-dark: #256242;
+    -fx-accent: #5CC98B;
+    -fx-cream: #F7F5EE;
+    -fx-cream-border: #E4E0D3;
+    -fx-cream-footer: #F1EEE4;
+    -fx-ink: #232A22;
+    -fx-ink-soft: #5B6255;
+    -fx-zinc-900: #18181b;
+    -fx-zinc-700: #3f3f46;
+    -fx-zinc-500: #71717a;
+    -fx-zinc-400: #a1a1aa;
+    -fx-zinc-200: #e4e4e7;
+    -fx-zinc-100: #f4f4f5;
+    -fx-zinc-50: #fafafa;
+    -fx-sidebar-green: #15803d;
+    -fx-sidebar-green-dark: #14532d;
+    -fx-sidebar-green-hover: #16a34a;
+    -fx-slate-800: #1e293b;
+    -fx-red: #dc2626;
+    -fx-amber: #d97706;
+    -fx-background-color: white;
+}
+
+/* ---------- generic text styles ---------- */
+.font-serif-display { -fx-font-family: "Georgia", "Times New Roman", serif; }
+.h1-hero { -fx-font-size: 42px; -fx-font-weight: 700; -fx-text-fill: #232A22; }
+.h1-page { -fx-font-size: 26px; -fx-font-weight: 800; -fx-text-fill: #18181b; }
+.h2-section { -fx-font-size: 18px; -fx-font-weight: 700; -fx-text-fill: #18181b; }
+.subtitle { -fx-font-size: 14px; -fx-text-fill: #71717a; }
+.muted { -fx-text-fill: #71717a; }
+.muted-cream { -fx-text-fill: #5B6255; }
+
+/* ---------- buttons ---------- */
+.btn-primary {
+    -fx-background-color: #2F7A54;
+    -fx-text-fill: white;
+    -fx-font-weight: 700;
+    -fx-font-size: 13px;
+    -fx-background-radius: 8;
+    -fx-padding: 10 22 10 22;
+    -fx-cursor: hand;
+}
+.btn-primary:hover { -fx-background-color: #256242; }
+
+.btn-secondary {
+    -fx-background-color: transparent;
+    -fx-text-fill: #232A22;
+    -fx-font-weight: 600;
+    -fx-font-size: 13px;
+    -fx-background-radius: 8;
+    -fx-padding: 8 16 8 16;
+    -fx-cursor: hand;
+}
+.btn-secondary:hover { -fx-background-color: derive(#232A22, 95%); }
+
+.btn-outline {
+    -fx-background-color: white;
+    -fx-text-fill: #3f3f46;
+    -fx-font-weight: 600;
+    -fx-font-size: 12px;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-border-color: #e4e4e7;
+    -fx-padding: 7 14 7 14;
+    -fx-cursor: hand;
+}
+.btn-outline:hover { -fx-background-color: #f4f4f5; }
+
+.btn-danger {
+    -fx-background-color: #dc2626;
+    -fx-text-fill: white;
+    -fx-font-weight: 700;
+    -fx-font-size: 11px;
+    -fx-background-radius: 8;
+    -fx-padding: 6 12 6 12;
+    -fx-cursor: hand;
+}
+.btn-danger:hover { -fx-background-color: #b91c1c; }
+
+.btn-dark {
+    -fx-background-color: #18181b;
+    -fx-text-fill: white;
+    -fx-font-weight: 700;
+    -fx-font-size: 11px;
+    -fx-background-radius: 8;
+    -fx-padding: 7 14 7 14;
+    -fx-cursor: hand;
+}
+
+.link-brand { -fx-text-fill: #2F7A54; -fx-font-weight: 600; -fx-cursor: hand; }
+.link-brand:hover { -fx-underline: true; }
+
+/* ---------- cards ---------- */
+.card {
+    -fx-background-color: white;
+    -fx-background-radius: 14;
+    -fx-border-radius: 14;
+    -fx-border-color: #e4e4e7;
+    -fx-border-width: 1;
+    -fx-padding: 22;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.06), 8, 0, 0, 2);
+}
+.card-cream {
+    -fx-background-color: white;
+    -fx-background-radius: 12;
+    -fx-border-radius: 12;
+    -fx-border-color: #E4E0D3;
+    -fx-border-width: 1;
+    -fx-padding: 26;
+}
+.stat-card {
+    -fx-background-color: white;
+    -fx-background-radius: 12;
+    -fx-border-radius: 12;
+    -fx-border-color: #e4e4e7;
+    -fx-border-width: 1;
+    -fx-padding: 20;
+}
+.stat-label { -fx-font-size: 11px; -fx-font-weight: 700; -fx-text-fill: #71717a; }
+.stat-value { -fx-font-size: 28px; -fx-font-weight: 800; -fx-text-fill: #18181b; }
+
+/* ---------- badges ---------- */
+.badge-green { -fx-background-color: #dcfce7; -fx-text-fill: #15803d; -fx-background-radius: 6; -fx-padding: 3 9 3 9; -fx-font-size: 11px; -fx-font-weight: 700; }
+.badge-red { -fx-background-color: #fee2e2; -fx-text-fill: #b91c1c; -fx-background-radius: 6; -fx-padding: 3 9 3 9; -fx-font-size: 11px; -fx-font-weight: 700; }
+.badge-amber { -fx-background-color: #fef3c7; -fx-text-fill: #b45309; -fx-background-radius: 6; -fx-padding: 3 9 3 9; -fx-font-size: 11px; -fx-font-weight: 700; }
+.badge-outline-green { -fx-background-color: #f0fdf4; -fx-text-fill: #2F7A54; -fx-border-color: #bbf7d0; -fx-border-radius: 20; -fx-background-radius: 20; -fx-padding: 3 10 3 10; -fx-font-size: 11px; -fx-font-weight: 600; }
+.badge-outline-orange { -fx-background-color: #fff7ed; -fx-text-fill: #ea580c; -fx-border-color: #fed7aa; -fx-border-radius: 20; -fx-background-radius: 20; -fx-padding: 3 10 3 10; -fx-font-size: 11px; -fx-font-weight: 600; }
+.pill-eyebrow { -fx-background-color: rgba(92,201,139,0.14); -fx-text-fill: #2F7A54; -fx-background-radius: 20; -fx-padding: 6 14 6 14; -fx-font-size: 11px; -fx-font-weight: 700; }
+
+/* ---------- inputs ---------- */
+.text-field, .password-field, .text-area {
+    -fx-background-color: white;
+    -fx-border-color: #d4d4d8;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 9 12 9 12;
+    -fx-font-size: 13px;
+}
+.text-field:focused, .password-field:focused, .text-area:focused {
+    -fx-border-color: #2F7A54;
+}
+.auth-field {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #3B82F6;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-padding: 0 12 0 12;
+    -fx-font-size: 13px;
+}
+.auth-field:focused {
+    -fx-border-color: #2F7A54;
+}
+.field-label { -fx-font-size: 12px; -fx-font-weight: 600; -fx-text-fill: #3f3f46; }
+.combo-box { -fx-background-color: #fafafa; -fx-border-color: #e4e4e7; -fx-border-radius: 10; -fx-background-radius: 10; }
+
+/* ---------- sidebar ---------- */
+.app-shell { -fx-background-color: #1e293b; }
+.sidebar { -fx-background-color: #15803d; -fx-min-width: 240; -fx-pref-width: 240; -fx-max-width: 240; }
+.sidebar-brand-bar { -fx-border-color: transparent transparent #14532d transparent; -fx-border-width: 0 0 1 0; -fx-padding: 18 20 18 20; }
+.sidebar-brand-text { -fx-text-fill: white; -fx-font-weight: 800; -fx-font-size: 15px; }
+.sidebar-link { -fx-text-fill: #dcfce7; -fx-font-size: 13px; -fx-font-weight: 600; -fx-background-color: transparent; -fx-background-radius: 8; -fx-padding: 11 16 11 16; -fx-cursor: hand; -fx-alignment: center-left; -fx-max-width: Infinity; }
+.sidebar-link:hover { -fx-background-color: #16a34a; -fx-text-fill: white; }
+.sidebar-link-active { -fx-text-fill: white; -fx-font-size: 13px; -fx-font-weight: 700; -fx-background-color: #14532d; -fx-background-radius: 8; -fx-padding: 11 16 11 16; -fx-alignment: center-left; -fx-max-width: Infinity; }
+.sidebar-footer { -fx-border-color: #14532d transparent transparent transparent; -fx-border-width: 1 0 0 0; -fx-padding: 18 20 18 20; }
+.avatar-circle { -fx-background-color: white; -fx-background-radius: 100; -fx-min-width: 38; -fx-min-height: 38; -fx-max-width: 38; -fx-max-height: 38; -fx-alignment: center; }
+.avatar-text { -fx-text-fill: #15803d; -fx-font-weight: 800; -fx-font-size: 14px; }
+.sidebar-user-name { -fx-text-fill: white; -fx-font-size: 13px; -fx-font-weight: 700; }
+.sidebar-user-role { -fx-text-fill: #bbf7d0; -fx-font-size: 11px; }
+
+/* ---------- page backgrounds ---------- */
+.bg-cream { -fx-background-color: #F7F5EE; }
+.bg-white-page { -fx-background-color: white; }
+.bg-gray-page { -fx-background-color: #f9fafb; }
+.bg-zinc-page { -fx-background-color: #fafafa; }
+
+/* ---------- tables ---------- */
+.data-table { -fx-background-color: white; -fx-border-color: #e4e4e7; -fx-border-radius: 12; -fx-background-radius: 12; }
+.data-table .column-header-background { -fx-background-color: #fafafa; -fx-background-radius: 12 12 0 0; }
+.data-table .column-header { -fx-background-color: transparent; -fx-border-color: transparent transparent #e4e4e7 transparent; -fx-padding: 6 4 6 4; }
+.data-table .column-header .label { -fx-text-fill: #71717a; -fx-font-weight: 700; -fx-font-size: 10.5px; }
+.data-table .table-row-cell { -fx-background-color: white; -fx-border-color: transparent transparent #f4f4f5 transparent; }
+.data-table .table-row-cell:odd { -fx-background-color: white; }
+.data-table .table-row-cell:hover { -fx-background-color: #fafafa; }
+.data-table .table-cell { -fx-text-fill: #27272a; -fx-font-size: 12.5px; -fx-padding: 10 10 10 10; }
+
+/* ---------- top public header ---------- */
+.public-header { -fx-background-color: transparent; -fx-border-color: transparent transparent #E4E0D3 transparent; -fx-border-width: 0 0 1 0; -fx-padding: 18 34 18 34; }
+.brand-logo-box { -fx-background-color: #2F7A54; -fx-background-radius: 8; -fx-min-width: 34; -fx-min-height: 34; -fx-max-width: 34; -fx-max-height: 34; -fx-alignment: center; }
+.brand-logo-text { -fx-text-fill: white; -fx-font-weight: 800; }
+.brand-name { -fx-text-fill: #232A22; -fx-font-weight: 700; -fx-font-size: 14px; }
+
+/* ---------- quiz attempt ---------- */
+.quiz-header { -fx-background-color: #166534; }
+.quiz-timer-pill { -fx-background-color: rgba(0,0,0,0.25); -fx-background-radius: 20; -fx-border-color: rgba(255,255,255,0.25); -fx-border-radius: 20; -fx-padding: 6 16 6 16; }
+.quiz-option { -fx-background-color: white; -fx-border-color: #e7e5e4; -fx-border-radius: 12; -fx-background-radius: 12; -fx-padding: 16; -fx-cursor: hand; }
+.quiz-option-selected { -fx-background-color: #f0fdf4; -fx-border-color: #15803d; -fx-border-width: 2; -fx-border-radius: 12; -fx-background-radius: 12; -fx-padding: 15; -fx-cursor: hand; }
+.qnum-answered { -fx-background-color: #15803d; -fx-text-fill: white; -fx-font-weight: 800; -fx-background-radius: 8; }
+.qnum-review { -fx-background-color: #d97706; -fx-text-fill: white; -fx-font-weight: 800; -fx-background-radius: 8; }
+.qnum-unanswered { -fx-background-color: #f5f5f4; -fx-text-fill: #57534e; -fx-font-weight: 800; -fx-background-radius: 8; }
+
+/* ---------- misc ---------- */
+.divider { -fx-background-color: #e4e4e7; -fx-min-height: 1; -fx-max-height: 1; }
+.chat-bubble-in { -fx-background-color: white; -fx-border-color: #e4e4e7; -fx-background-radius: 16 16 16 2; -fx-border-radius: 16 16 16 2; -fx-padding: 12; }
+.chat-bubble-out { -fx-background-color: #2F7A54; -fx-background-radius: 16 16 2 16; -fx-padding: 12; }
+.chat-bubble-out .label { -fx-text-fill: white; }
+.scroll-pane, .scroll-pane > .viewport { -fx-background-color: transparent; }

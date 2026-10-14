@@ -1,0 +1,22 @@
+/* Import your custom brand theme */
+@import "./theme.css";
+
+/* Standard Tailwind v3 Directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Webkit autofill fix for dark mode */
+.dark input:-webkit-autofill,
+.dark input:-webkit-autofill:hover, 
+.dark input:-webkit-autofill:focus, 
+.dark input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px #121212 inset !important;
+    -webkit-text-fill-color: #f3f4f6 !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Required for Alpine.js to prevent UI flashing */
+[x-cloak] {
+    display: none !important;
+}
