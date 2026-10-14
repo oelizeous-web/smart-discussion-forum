@@ -13,8 +13,8 @@ services:
     envVars:
       - key: APP_ENV
         value: production
-      - key: APP_DEBUG
-        value: true
+           - key: APP_DEBUG
+        value: false
       - key: APP_URL
         value: https://smart-discussion-forum-backend.onrender.com
       - key: ASSET_URL
